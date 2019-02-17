@@ -6,7 +6,7 @@ namespace PadawansTask11
     {
         public static int? FindIndex(double[] array, double accuracy)
         {
-            int? index = 0;
+            int index = 0;
             double sumLeft = array[0], sumRight = array[array.Length - 1];
             for (int i = 0, y = array.Length - 1; i < y;)
             {
