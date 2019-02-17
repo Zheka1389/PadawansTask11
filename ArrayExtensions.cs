@@ -6,6 +6,18 @@ namespace PadawansTask11
     {
         public static int? FindIndex(double[] array, double accuracy)
         {
+            if (accuracy <= 0 || accuracy >= 1)
+            {
+                throw new ArgumentOutOfRangeException();
+            }
+            if (array == null)
+            {
+                throw new ArgumentNullException();
+            }
+            if (array.Length == 0)
+            {
+                throw new ArgumentException();
+            }
             int index = 0;
             double sumLeft = array[0], sumRight = array[array.Length - 1];
             for (int i = 0, y = array.Length - 1; i < y;)
